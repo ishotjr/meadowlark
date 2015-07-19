@@ -11,6 +11,7 @@ suite('Cross-Page Tests', function(){
 
 	test('requesting a group rate quote from the hood river tour page should ' +
 			'populate the hidden referrer field correctly', function(done){
+        this.timeout(15000);
 		var referrer = 'http://localhost:3000/tours/hood-river';
 		browser.visit(referrer, function(){
 			browser.clickLink('.requestGroupRate', function(){
@@ -22,6 +23,7 @@ suite('Cross-Page Tests', function(){
 
 	test('requesting a group rate from the oregon coast tour page should ' +
 			'populate the hidden referrer field correctly', function(done){
+        this.timeout(15000);
 		var referrer = 'http://localhost:3000/tours/oregon-coast';
 		browser.visit(referrer, function(){
 			browser.clickLink('.requestGroupRate', function(){
@@ -31,7 +33,7 @@ suite('Cross-Page Tests', function(){
 		});
 	});
 
-	test('visiting the "request group rate" page dirctly should result ' +
+	test('visiting the "request group rate" page directly should result ' +
 			'in an empty value for the referrer field', function(done){
 		browser.visit('http://localhost:3000/tours/request-group-rate', function(){
 			assert(browser.field('referrer').value === '');
