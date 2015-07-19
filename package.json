@@ -1,0 +1,17 @@
+{
+  "author": "Ish Ot Jr. (http://ishotjr.github.io)",
+  "name": "meadowlark",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ishotjr/meadowlark.git"
+  },
+  "dependencies": {
+    "express": "^4.13.1"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
