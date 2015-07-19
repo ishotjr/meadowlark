@@ -33,6 +33,10 @@ app.get('/tours/hood-river', function(req, res, next) {
 	res.render('tours/hood-river');
 });
 
+app.get('/tours/oregon-coast', function(req, res, next) {
+	res.render('tours/oregon-coast');
+});
+
 app.get('/tours/request-group-rate', function(req, res, next) {
 	res.render('tours/request-group-rate');
 });
