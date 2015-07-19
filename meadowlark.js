@@ -2,6 +2,12 @@ var express = require('express');
 
 var app = express();
 
+var fortunes = [
+	"Fortune #1",
+	"Fortune #2",
+	"Fortune #3"	
+];
+
 //set up handlebars view engine
 var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
@@ -17,7 +23,8 @@ app.get('/', function(req, res, next) {
 });
 
 app.get('/about', function(req, res) {
-	res.render('about');
+	var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+	res.render('about', { fortune: randomFortune });
 });
 
 // 404 page
