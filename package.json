@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "chai": "^3.1.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "zombie": "^4.0.13"
   },
   "optionalDependencies": {},
   "engines": {
